@@ -4,6 +4,7 @@ import com.codeborne.selenide.ElementsCollection;
 import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class SelenideRepositorySearch extends TestBase{
@@ -25,7 +26,7 @@ public class SelenideRepositorySearch extends TestBase{
         String expectedLinkText = "Soft Assertions";
         links.find(text(expectedLinkText)).shouldBe(visible);
         links.find(text(expectedLinkText)).parent().$("a").click();
-        $("body").shouldHave(text("JUnit5"));
+        $(".markdown-body").$(byText("3. Using JUnit5 extend test class:")).sibling(0).shouldHave(text(junit5Code));
 
     }
 }
