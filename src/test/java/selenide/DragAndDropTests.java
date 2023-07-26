@@ -15,7 +15,7 @@ public class DragAndDropTests extends TestBase {
     @Test
     void moveToElementTest () {
         open("https://the-internet.herokuapp.com/drag_and_drop");
-        actions().clickAndHold($("#column-a")).moveToElement($("#column-b")).release().perform();
+        actions().clickAndHold($(columnA)).moveToElement($(columnB)).release().perform();
     }
 
     @Test
