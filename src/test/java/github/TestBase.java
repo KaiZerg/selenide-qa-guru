@@ -15,9 +15,6 @@ public class TestBase {
             "    $(\"#second\").should(visible).click();\n" +
             "  }\n" +
             "}" ;
-    String solutions = " Solutions ";
-
-    String enterprise = " Enterprise ";
     @BeforeAll
     static void beforeAll() {
 
